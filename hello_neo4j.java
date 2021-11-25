@@ -1,3 +1,7 @@
+//JAVA 17
+///usr/bin/env jbang "$0" "$@" ; exit $?
+//DEPS info.picocli:picocli-codegen:4.6.2 org.neo4j.driver:neo4j-java-driver:4.3.6 org.reactivestreams:reactive-streams:1.0.3
+
 import java.util.concurrent.Callable;
 
 import org.neo4j.driver.AuthTokens;
@@ -10,9 +14,6 @@ import picocli.CommandLine;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 import picocli.CommandLine.Parameters;
-
-///usr/bin/env jbang "$0" "$@" ; exit $?
-//DEPS info.picocli:picocli-codegen:4.6.2 org.neo4j.driver:neo4j-java-driver:4.3.6 org.reactivestreams:reactive-streams:1.0.3
 
 @Command(name = "hello_neo4j")
 public class hello_neo4j implements Callable<Integer> {
