@@ -1,0 +1,15 @@
+{
+  "catalogs": {},
+  "aliases": {
+    "hello_neo4j": {
+      "script-ref": "hello_neo4j.java",
+      "description": "Get some statistics out of your Neo4j instance.\nCall hello_neo4j --help to see the usage."
+    },
+    "cypher": {
+      "script-ref": "cypher_shell.java",
+      "main": "org.neo4j.shell.Main",
+      "description": "Use Neo4j's Cypher shell to execute Cypher queries.\nInteractive shell without parameters or e.g. jbang cypher -a neo4j://localhost:7687 -u neo4j -p secret 'MATCH (n) return n'"
+    }
+  },
+  "templates": {}
+}
