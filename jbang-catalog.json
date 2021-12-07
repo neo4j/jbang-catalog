@@ -3,12 +3,17 @@
   "aliases": {
     "hello_neo4j": {
       "script-ref": "hello_neo4j.java",
-      "description": "Get some statistics out of your Neo4j instance.\nCall hello_neo4j --help to see the usage."
+      "description": "Get some statistics out of your Neo4j instance.\nCall jbang hello_neo4j@neo4j --help to see the usage."
     },
     "cypher": {
       "script-ref": "cypher_shell.java",
-      "main": "org.neo4j.shell.Main",
-      "description": "Use Neo4j's Cypher shell to execute Cypher queries.\nInteractive shell without parameters or e.g. jbang cypher -a neo4j://localhost:7687 -u neo4j -p secret 'MATCH (n) return n'"
+      "description": "Use Neo4j\u0027s Cypher shell to execute Cypher queries.\nInteractive shell without parameters or e.g. jbang neo4j@cypher -a neo4j://localhost:7687 -u neo4j -p secret \u0027MATCH (n) return n\u0027",
+      "main": "org.neo4j.shell.Main"
+    },
+    "neo4j-migrations": {
+      "script-ref": "neo4j_migrations.java",
+      "description": "Run neo4j-migrations.\nFor starter: jbang neo4j-migrations@neo4j -p <password> info.\nVisit https://github.com/michael-simons/neo4j-migrations/ for more information.",
+      "main": "ac.simons.neo4j.migrations.cli.MigrationsCli"
     }
   },
   "templates": {}
