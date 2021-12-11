@@ -14,7 +14,10 @@
       "script-ref": "neo4j_migrations.java",
       "description": "Run neo4j-migrations.\nFor starter: jbang neo4j-migrations@neo4j -p <password> info.\nVisit https://github.com/michael-simons/neo4j-migrations/ for more information.",
       "main": "ac.simons.neo4j.migrations.cli.MigrationsCli"
-    }
+    },
+    "rdbms2neo4j": {
+      "script-ref": "rdbms2neo4j.java",
+      "description": "Imports the provided tables from an JDBC-URL (posgres, mysql drivers bundled) into Neo4j."}
   },
   "templates": {}
 }
