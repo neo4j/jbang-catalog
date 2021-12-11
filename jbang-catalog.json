@@ -17,7 +17,7 @@
     },
     "rdbms2neo4j": {
       "script-ref": "rdbms2neo4j.java",
-      "description": "Imports the provided tables from an JDBC-URL (posgres, mysql drivers bundled) into Neo4j."}
+      "description": "Imports the provided tables from an JDBC-URL (postgres, mysql drivers bundled) into Neo4j."}
   },
   "templates": {}
 }
