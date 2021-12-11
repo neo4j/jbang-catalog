@@ -27,13 +27,13 @@ public class rdbms2neo4j implements Callable {
     @Option(names = "-u", description = "Neo4j user", required = false, defaultValue = "neo4j")
     String username;
 
-    @Option(names = "-p", description = "Password of the provided Neo4j user", required=true, defaultValue = "${NEO4J_PASSWORD}")
+    @Option(names = "-p", description = "Password of the provided Neo4j user, or environment variable NEO4J_PASSWORD", required=true, defaultValue = "${env:NEO4J_PASSWORD}")
     String password;
 
-    @Option(names = "-a", description = "URI to connect to (defaults to ${DEFAULT-VALUE})", paramLabel = "URI", defaultValue = "${NEO4J_URL:-neo4j://localhost:7687}")
+    @Option(names = "-a", description = "URI to connect to (defaults to ${DEFAULT-VALUE}) or environment variable NEO4J_URL", paramLabel = "URI", defaultValue = "${env:NEO4J_URL:-neo4j://localhost:7687}")
     String uri;
 
-    @Option(names = "-j", description = "JDBC-URL to read from", paramLabel = "JDBC", defaultValue = "${JDBC_URL}")
+    @Option(names = "-j", description = "JDBC-URL to read from, or environment variable JDBC_URL", paramLabel = "JDBC", defaultValue = "${end:JDBC_URL}")
     String jdbc;
 
     @Parameters(arity = "1..*", description = "JDBC Tables")
