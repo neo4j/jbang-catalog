@@ -12,8 +12,7 @@
     },
     "neo4j-migrations" : {
       "script-ref" : "neo4j_migrations.java",
-      "description" : "Simple, Flyway DB inspired migrations for Neo4j.",
-      "main" : "ac.simons.neo4j.migrations.cli.MigrationsCli"
+      "description" : "Simple, Flyway DB inspired migrations for Neo4j."
     },
     "rdbms2neo4j" : {
       "script-ref" : "rdbms2neo4j.java",
