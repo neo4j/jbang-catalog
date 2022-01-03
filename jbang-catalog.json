@@ -7,8 +7,7 @@
     },
     "cypher" : {
       "script-ref" : "cypher_shell.java",
-      "description" : "Use Neo4j's Cypher shell to execute Cypher queries.\nInteractive shell without parameters or e.g. jbang neo4j@cypher -a neo4j://localhost:7687 -u neo4j -p secret 'MATCH (n) return n'",
-      "main" : "org.neo4j.shell.Main"
+      "description" : "Use Neo4j's Cypher shell to execute Cypher queries.\nInteractive shell without parameters or e.g. jbang neo4j@cypher -a neo4j://localhost:7687 -u neo4j -p secret 'MATCH (n) return n'"
     },
     "neo4j-migrations" : {
       "script-ref" : "neo4j_migrations.java",
