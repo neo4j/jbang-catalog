@@ -1,23 +1,24 @@
 {
-  "catalogs": {},
-  "aliases": {
-    "hello_neo4j": {
-      "script-ref": "hello_neo4j.java",
-      "description": "Get some statistics out of your Neo4j instance.\nCall jbang hello_neo4j@neo4j --help to see the usage."
+  "catalogs" : { },
+  "aliases" : {
+    "hello_neo4j" : {
+      "script-ref" : "hello_neo4j.java",
+      "description" : "Get some statistics out of your Neo4j instance.\nCall jbang hello_neo4j@neo4j --help to see the usage."
     },
-    "cypher": {
-      "script-ref": "cypher_shell.java",
-      "description": "Use Neo4j\u0027s Cypher shell to execute Cypher queries.\nInteractive shell without parameters or e.g. jbang neo4j@cypher -a neo4j://localhost:7687 -u neo4j -p secret \u0027MATCH (n) return n\u0027",
-      "main": "org.neo4j.shell.Main"
+    "cypher" : {
+      "script-ref" : "cypher_shell.java",
+      "description" : "Use Neo4j's Cypher shell to execute Cypher queries.\nInteractive shell without parameters or e.g. jbang neo4j@cypher -a neo4j://localhost:7687 -u neo4j -p secret 'MATCH (n) return n'",
+      "main" : "org.neo4j.shell.Main"
     },
-    "neo4j-migrations": {
-      "script-ref": "neo4j_migrations.java",
-      "description": "Run neo4j-migrations.\nFor starter: jbang neo4j-migrations@neo4j -p <password> info.\nVisit https://github.com/michael-simons/neo4j-migrations/ for more information.",
-      "main": "ac.simons.neo4j.migrations.cli.MigrationsCli"
+    "neo4j-migrations" : {
+      "script-ref" : "neo4j_migrations.java",
+      "description" : "Simple, Flyway DB inspired migrations for Neo4j.",
+      "main" : "ac.simons.neo4j.migrations.cli.MigrationsCli"
     },
-    "rdbms2neo4j": {
-      "script-ref": "rdbms2neo4j.java",
-      "description": "Imports the provided tables from an JDBC-URL (postgres, mysql drivers bundled) into Neo4j."}
+    "rdbms2neo4j" : {
+      "script-ref" : "rdbms2neo4j.java",
+      "description" : "Imports the provided tables from an JDBC-URL (postgres, mysql drivers bundled) into Neo4j."
+    }
   },
-  "templates": {}
+  "templates" : { }
 }
