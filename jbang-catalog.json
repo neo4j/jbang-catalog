@@ -18,5 +18,10 @@
       "description" : "Imports the provided tables from an JDBC-URL (postgres, mysql drivers bundled) into Neo4j."
     }
   },
-  "templates" : { }
+  "templates" : {
+    "run-neo4j": {
+      "file-refs": {"{filename}":  "templates/run_neo4j.java.qute"},
+      "description": "Basic Neo4j Driver example"
+    }
+  }
 }

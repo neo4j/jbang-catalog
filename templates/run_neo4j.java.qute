@@ -1,0 +1,31 @@
+///usr/bin/env jbang "$0" "$@" ; exit $?
+//JAVA 10+
+//DEPS org.neo4j.driver:neo4j-java-driver:4.3.4
+
+// NEO4J_URL="bolt://localhost" NEO4J_PASSWORD="secret"  ./{baseName}.java "MATCH (n) RETURN labels(n) AS labels, properties(n) AS props LIMIT 10"
+import static java.lang.System.*;
+import java.util.*;
+import org.neo4j.driver.*;
+
+public class {baseName} {
+    static {
+        java.util.logging.LogManager.getLogManager().reset();
+    }
+
+    public static void main(String... args) throws Exception {
+        try (var driver=GraphDatabase.driver(System.getenv("NEO4J_URL"),
+                        AuthTokens.basic( "neo4j", System.getenv("NEO4J_PASSWORD")));
+             var session=driver.session()) {
+             var result=session.run(String.join(" ",args));
+             var cols=result.keys().toArray(new String[result.keys().size()]);
+             var row = 0;
+             while (result.hasNext() && row++ < 100) {
+                var record = result.next();
+                for (int c=0;c<cols.length;c++) {
+                    out.printf("%s: %s ", cols[c], record.get(cols[c]).asObject());
+                }
+                out.println();
+            }
+        }
+    }
+}
