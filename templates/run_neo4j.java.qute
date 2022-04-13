@@ -1,9 +1,8 @@
 ///usr/bin/env jbang "$0" "$@" ; exit $?
-//JAVA 10+
-//DEPS org.neo4j.driver:neo4j-java-driver:4.3.4
+//JAVA 11+
+//DEPS org.neo4j.driver:neo4j-java-driver:4.4.5
 
 // NEO4J_URL="bolt://localhost" NEO4J_PASSWORD="secret"  ./{baseName}.java "MATCH (n) RETURN labels(n) AS labels, properties(n) AS props LIMIT 10"
-import static java.lang.System.*;
 import java.util.*;
 import org.neo4j.driver.*;
 
@@ -22,9 +21,9 @@ public class {baseName} {
              while (result.hasNext() && row++ < 100) {
                 var record = result.next();
                 for (int c=0;c<cols.length;c++) {
-                    out.printf("%s: %s ", cols[c], record.get(cols[c]).asObject());
+                    System.out.printf("%s: %s ", cols[c], record.get(cols[c]).asObject());
                 }
-                out.println();
+                System.out.println();
             }
         }
     }
