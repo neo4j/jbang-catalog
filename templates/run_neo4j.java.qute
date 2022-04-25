@@ -7,20 +7,18 @@ import java.util.*;
 import org.neo4j.driver.*;
 
 public class {baseName} {
-    static {
-        java.util.logging.LogManager.getLogManager().reset();
-    }
 
-    public static void main(String... args) throws Exception {
-        try (var driver=GraphDatabase.driver(System.getenv("NEO4J_URL"),
-                        AuthTokens.basic( "neo4j", System.getenv("NEO4J_PASSWORD")));
-             var session=driver.session()) {
-             var result=session.run(String.join(" ",args));
-             var cols=result.keys().toArray(new String[result.keys().size()]);
-             var row = 0;
-             while (result.hasNext() && row++ < 100) {
+    public static void main(String... args) {
+        try (var driver = GraphDatabase.driver(System.getenv("NEO4J_URL"),
+                AuthTokens.basic("neo4j", System.getenv("NEO4J_PASSWORD")),
+                Config.builder().withLogging(Logging.none()).build());
+             var session = driver.session()) {
+            var result = session.run(String.join(" ", args));
+            var cols = result.keys().toArray(new String[result.keys().size()]);
+            var row = 0;
+            while (result.hasNext() && row++ < 100) {
                 var record = result.next();
-                for (int c=0;c<cols.length;c++) {
+                for (int c = 0; c < cols.length; c++) {
                     System.out.printf("%s: %s ", cols[c], record.get(cols[c]).asObject());
                 }
                 System.out.println();
