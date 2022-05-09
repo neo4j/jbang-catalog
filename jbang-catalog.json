@@ -23,9 +23,11 @@
     }
   },
   "templates" : {
-    "run-neo4j": {
-      "file-refs": {"{filename}":  "templates/run_neo4j.java.qute"},
-      "description": "Basic Neo4j Driver example"
+    "run-neo4j" : {
+      "file-refs" : {
+        "{filename}" : "templates/run_neo4j.java.qute"
+      },
+      "description" : "Basic Neo4j Driver example"
     }
   }
 }
