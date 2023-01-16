@@ -1,7 +1,7 @@
 ///usr/bin/env jbang "$0" "$@" ; exit $?
 //JAVA 17
 //DEPS info.picocli:picocli:4.6.3
-//DEPS org.neo4j:neo4j-cypher-dsl-parser:2022.5.0
+//DEPS org.neo4j:neo4j-cypher-dsl-parser:2023.0.0
 
 import picocli.CommandLine;
 
