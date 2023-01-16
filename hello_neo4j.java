@@ -1,6 +1,6 @@
 //JAVA 17
 ///usr/bin/env jbang "$0" "$@" ; exit $?
-//DEPS info.picocli:picocli-codegen:4.6.2 org.neo4j.driver:neo4j-java-driver:4.3.6 org.reactivestreams:reactive-streams:1.0.3
+//DEPS info.picocli:picocli-codegen:4.6.2 org.neo4j.driver:neo4j-java-driver:5.4.0
 
 import java.util.concurrent.Callable;
 
