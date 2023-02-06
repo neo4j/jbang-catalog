@@ -1,7 +1,7 @@
 //usr/bin/env jbang "$0" "$@" ; exit $?
-//JAVA 17+
-//DEPS eu.michael-simons.neo4j:neo4j-migrations-cli:2.1.0
-// Generated with JReleaser 1.4.0 at 2023-01-23T11:00:26.088992Z
+//JAVA 8+
+//DEPS eu.michael-simons.neo4j:neo4j-migrations-cli:1.16.1
+// Generated with JReleaser 1.4.0 at 2023-02-06T10:18:40.733513Z
 
 public class neo4j_migrations {
     public static void main(String... args) throws Exception {
