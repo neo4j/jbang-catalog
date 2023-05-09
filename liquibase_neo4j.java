@@ -1,6 +1,6 @@
 //usr/bin/env jbang "$0" "$@" ; exit $?
 //JAVA 8+
-//DEPS org.liquibase.ext:liquibase-neo4j:4.21.1
+//DEPS org.liquibase.ext:liquibase-neo4j:4.21.1.1
 //DEPS org.liquibase:liquibase-core:4.21.1
 //DEPS info.picocli:picocli:4.7.0
 
