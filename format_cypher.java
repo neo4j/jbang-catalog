@@ -12,6 +12,8 @@ import java.io.UncheckedIOException;
 import java.util.concurrent.Callable;
 import java.util.stream.Collectors;
 
+import org.neo4j.cypherdsl.core.Statement;
+import org.neo4j.cypherdsl.core.TreeNode;
 import org.neo4j.cypherdsl.core.renderer.Configuration;
 import org.neo4j.cypherdsl.core.renderer.Renderer;
 import org.neo4j.cypherdsl.parser.CypherParser;
@@ -24,6 +26,9 @@ public class format_cypher implements Callable<Integer> {
 		System.exit(exitCode);
 	}
 
+	@CommandLine.Option(names = "--print-tree")
+	boolean printTree = false;
+
 	@CommandLine.Parameters(index = "0", description = "Cypher to format", arity = "0")
 	String input;
 
@@ -34,7 +39,11 @@ public class format_cypher implements Callable<Integer> {
 			throw new IllegalArgumentException("Please enter some valid cypher");
 		}
 		var statement = CypherParser.parse(cypher);
-		System.out.println(Renderer.getRenderer(Configuration.prettyPrinting()).render(statement));
+		if (printTree) {
+			TreeNode.from(statement).printTo(System.out::append, node -> node.getValue() instanceof Statement s ? s.getCypher() : node.getValue().toString());
+		} else {
+			System.out.println(Renderer.getRenderer(Configuration.prettyPrinting()).render(statement));
+		}
 		return 0;
 	}
 
