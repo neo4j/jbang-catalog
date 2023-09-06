@@ -110,6 +110,13 @@ import picocli.CommandLine;
  *      jbang enforce-relationship-directions@neo4j --help
  * }
  * </pre>
+ *
+ * In case this is not found, you want to update your catalog:
+ * <pre>
+ * {@code
+ *      jbang catalog update
+ * }
+ * </pre>
  * @author Michael J. Simons
  */
 @CommandLine.Command(mixinStandardHelpOptions = true)
