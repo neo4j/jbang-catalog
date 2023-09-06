@@ -24,6 +24,10 @@
     "format-cypher" : {
       "script-ref" : "format_cypher.java",
       "description" : "Pretty print Cypher statements"
+    },
+    "enforce-relationship-directions": {
+      "script-ref" : "enforce_relationship_directions.java",
+      "description" : "Validates and enforces relationship directions in Cypher statements"
     }
   },
   "templates" : {

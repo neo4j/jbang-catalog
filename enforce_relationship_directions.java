@@ -107,7 +107,7 @@ import picocli.CommandLine;
  * Last but not least, it's also in the Neo4j JBang catalog, and you can directly run from there, too:
  * <pre>
  * {@code
- *      jbang enforce_relationship_directions@neo4j --help
+ *      jbang enforce-relationship-directions@neo4j --help
  * }
  * </pre>
  * @author Michael J. Simons
