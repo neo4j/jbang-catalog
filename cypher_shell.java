@@ -1,6 +1,6 @@
 //JAVA 17
 ///usr/bin/env jbang "$0" "$@" ; exit $?
-//DEPS org.neo4j:cypher-shell:5.3.0
+//DEPS org.neo4j:cypher-shell:5.14.0
 
 public class cypher_shell {
 
