@@ -19,7 +19,7 @@
     },
     "liquibase-neo4j" : {
       "script-ref" : "liquibase_neo4j.java",
-      "description" : "Run Liquibase migrations against your Neo4j server"
+      "description" : "Manage and run your Neo4j database changes with Liquibase"
     },
     "format-cypher" : {
       "script-ref" : "format_cypher.java",
