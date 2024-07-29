@@ -1,8 +1,8 @@
 //usr/bin/env jbang "$0" "$@" ; exit $?
 //JAVA 8+
-//DEPS org.liquibase.ext:liquibase-neo4j:4.28.0
-//DEPS org.liquibase:liquibase-core:4.28.0
-//DEPS info.picocli:picocli:4.7.5
+//DEPS org.liquibase.ext:liquibase-neo4j:4.29.0
+//DEPS org.liquibase:liquibase-core:4.29.0
+//DEPS info.picocli:picocli:4.7.6
 
 public class liquibase_neo4j {
     public static void main(String... args) throws Exception {
